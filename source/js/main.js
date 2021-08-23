@@ -3,7 +3,7 @@ const toggleSwitch = document.querySelector(
   '.switch-mode input[type="checkbox"]'
 );
 
-if ((document.documentElement.lang = "en")) {
+if (document.documentElement.lang === "en") {
   const sun = document.querySelector("#sun");
   sun.setAttribute("src", "../source/img/icons/sun.png");
 

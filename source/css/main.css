@@ -448,7 +448,7 @@ a {
 */
 #projects {
   display: block;
-  height: 100vh;
+  height: auto;
 }
 
 .projects-container {
@@ -513,7 +513,7 @@ a {
 }
 
 /* =================================
- * === Pantallas menores a 600px ===
+ * === Pantallas menores a 1024px ===
  * =================================
 */
 
