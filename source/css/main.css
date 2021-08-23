@@ -312,7 +312,10 @@ a {
  * === Sección Intro ===
  * =====================
 */
-
+#home {
+  display: block;
+  height: 100vh;
+}
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -556,26 +559,38 @@ a {
   }
 
   /* === Home === */
+
+  #home {
+    height: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .switch-container {
+    margin: auto;
+    padding: 1em;
+    width: 100%;
+  }
+
+  .bandera-container {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .bandera {
+    position: relative;
+    left: 30px;
+  }
+
   .wrapper {
     flex-direction: column;
   }
 
-  .switch-container {
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-flexbox;
-    flex: 75%;
-  }
-  .bandera-container {
-    flex: 25%;
-  }
   .foto {
     max-width: 100%;
     height: auto;
-  }
-  .bandera {
-    position: relative;
-    left: 30px;
   }
 
   /* === Sections === */
