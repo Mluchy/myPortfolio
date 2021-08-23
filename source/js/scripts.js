@@ -4,20 +4,20 @@ const toggleSwitch = document.querySelector(
 );
 
 const sun = document.querySelector("#sun");
-sun.setAttribute("src", "./source/img/icons/sun.png");
+sun.setAttribute("src", "source/img/icons/sun.png");
 
 const moon = document.querySelector("#moon");
-moon.setAttribute("src", "./source/img/icons/moon.png");
+moon.setAttribute("src", "source/img/icons/moon.png");
 
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
-    sun.setAttribute("src", "./source/img/icons/sun2.png");
-    moon.setAttribute("src", "./source/img/icons/moon2.png");
+    sun.setAttribute("src", "source/img/icons/sun2.png");
+    moon.setAttribute("src", "source/img/icons/moon2.png");
   } else {
     document.documentElement.setAttribute("data-theme", "light");
-    sun.setAttribute("src", "./source/img/icons/sun.png");
-    moon.setAttribute("src", "./source/img/icons/moon.png");
+    sun.setAttribute("src", "source/img/icons/sun.png");
+    moon.setAttribute("src", "source/img/icons/moon.png");
   }
 }
 
