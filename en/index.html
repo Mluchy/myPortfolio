@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="María Luciana Gamarra portfolio as Web Developer"
+    />
+    <meta name="author" content="María Luciana Gamarra" />
+    <meta
+      name="keywords"
+      content="HTML5, CSS3, JavaScript, Java, Python, Django, Postman, Web Developer"
+    />
+    <meta name="theme-color" content="#00D1CD" />
+    <meta
+      property="og:image"
+      content="/source/img/logo/logo_size_invert_pinterest.jpg"
+    />
+    <meta
+      property="og:description"
+      content="María Luciana Gamarra portfolio as Web Developer"
+    />
+    <meta property="og:title" content="María Luciana Gamarra" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/source/img/logo/miLogo.png" />
+
+    <!-- Normalizar estilos -->
+    <link rel="stylesheet" href="/source/css/normalize.css" />
+
+    <!-- My styles -->
+    <link rel="stylesheet" href="/source/css/styles.css" />
+
+    <title>MLG Dev Portfolio</title>
+  </head>
+  <body>
+    <!-- ======= Header =======  -->
+    <!-- ======= Header =======  -->
+
+    <!-- navbar -->
+
+    <nav class="nav-container" id="nav-cont">
+      <!-- logo -->
+      <div class="navbar" id="nav">
+        <a href="/en/index.html">
+          <span class="logo">MLG</span>
+        </a>
+
+        <ul class="nav-list">
+          <li class="home">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="about">
+            <a href="#about" class="nav-link">About me</a>
+          </li>
+          <li class="skills">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+
+          <li class="projects">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="contact">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+          <img src="/source/img/icons/hamb2.png" alt="" class="hamb" />
+        </a>
+      </div>
+    </nav>
+
+    <!-- ======  Secciones ====== -->
+
+    <!-- Principal - Introducción -->
+    <section id="home">
+      <!-- Acá comienza la parte de intro -->
+      <div class="container">
+        <!-- Switch para cambiar de Light a Dark -->
+        <div class="switch-container">
+          <img src="" alt="sol" class="mode" id="sun" />
+
+          <label class="switch-mode" for="color-mode">
+            <input
+              class="switch-input"
+              name=""
+              type="checkbox"
+              id="color-mode"
+            />
+            <div class="switch-fill"></div>
+          </label>
+          <img src="" alt="luna" class="mode" id="moon" />
+        </div>
+
+        <!-- Banderitas para cambiar de Español a Inglés -->
+        <div class="bandera-container">
+          <!-- Ponerla en la Página que esta en ingles -->
+          <a href="../index.html">
+            <img
+              src="/source/img/icons/espana.png"
+              alt="Español"
+              class="bandera"
+            />
+          </a>
+          <!--  <a href="/en/index.html">
+            <img
+              src="/source/img/icons/estados-unidos.png"
+              alt="Inglés"
+              class="bandera"
+            />
+          </a> -->
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="intro-titles">
+          <h1 class="title-intro">
+            Hi, I'm <span class="enfasis">María Luciana Gammarra</span>
+          </h1>
+          <h2 class="sub-intro">Web Developer</h2>
+        </div>
+
+        <div class="foto-container">
+          <img
+            src="/source/img/photos/foto.jpg"
+            alt="Foto de María"
+            class="foto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section id="about">
+      <h2 class="title-section">Who I am?</h2>
+
+      <div class="about-me">
+        <div class="about-container">
+          <p>
+            Hi, my name is Luciana. I live in Resistencia - Chaco (Argentine).
+            <br />
+            <br />
+            I like coffee, sweet desserts and fantasy movies.
+            <br />
+            <br />
+            I studied different things until I found my place in programming. At
+            the moment, my focus is on web development. I would love to expand
+            my knowledge and improve my skills. I enjoy working on both the
+            Front-end and the Back-end.
+          </p>
+        </div>
+        <img
+          src="/source/img/photos/about2.jpg"
+          alt=""
+          class="dibujo"
+          id="draw-about"
+        />
+      </div>
+
+      <h2 class="title-section">Hobbies</h2>
+      <div class="hobbies-container">
+        <img src="/source/img/photos/hobbies3.jpg" alt="" class="dibujo" />
+
+        <div class="hobbies-item">
+          <ul class="hobbies-list">
+            <li>&#9829; Read novels in their original language</li>
+            <br />
+            <li>&#9829; Draw</li>
+            <br />
+            <li>&#9829; Listen to music</li>
+            <br />
+            <li>&#9829; Putting jigsaw puzzles together</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="title-section">Skills</h2>
+      <div class="skills-container">
+        <img src="/source/img/photos/skills.jpg" alt="" class="dibujo" />
+
+        <div class="skill-item">
+          <div class="skill-li-one">
+            <p>Front-end</p>
+            <ul>
+              <li>
+                <img
+                  src="/source/img/skills/html.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="/source/img/skills/css.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="/source/img/skills/js2.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-li-two">
+            <p>Back-end</p>
+            <ul>
+              <li>
+                <img
+                  src="/source/img/skills/java.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="/source/img/skills/python.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-li-three">
+            <p>Databases</p>
+            <ul>
+              <li>
+                <img
+                  src="/source/img/skills/mysql.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="/source/img/skills/mssql.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-li-four">
+            <p>Frameworks</p>
+            <ul>
+              <li>
+                <img
+                  src="/source/img/skills/spring.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="/source/img/skills/django.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-li-five">
+            <p>Front-end Framework</p>
+            <ul>
+              <li>
+                <img
+                  src="/source/img/skills/bootstrap.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-li-six">
+            <p>VCS</p>
+            <ul>
+              <li>
+                <img
+                  src="/source/img/skills/github1.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="skill-li-seven">
+            <p>Testing</p>
+            <ul>
+              <li>
+                <img
+                  src="/source/img/skills/postman.png"
+                  alt=""
+                  class="skill-icon"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects">
+      <h2 class="title-section">Projects</h2>
+      <div class="projects-container">
+        <img src="/source/img/photos/projects2.jpg" alt="" class="dibujo" />
+
+        <div class="projects-items">
+          <div class="project-card">
+            <div class="card-container">
+              <a
+                href="https://github.com/InformatorioGrupo3/GymProject"
+                target="_blank"
+                rel=""
+              >
+                <img
+                  src="/source/img/photos/gympatito.png"
+                  alt="project"
+                  class="project-foto"
+                />
+              </a>
+
+              <p>Gym's Patito</p>
+              <p>Web page of a Gym.</p>
+
+              <p>
+                <span>Django</span> - <span>Bootstrap</span> -
+                <span>HTML</span> -
+                <span>CSS</span>
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-container">
+              <a
+                href="https://github.com/Mluchy/Informatorio2021-Ecommerce"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/source/img/photos/info.png"
+                  alt="project"
+                  class="project-foto"
+                />
+              </a>
+              <p>Shoe Store</p>
+              <p>API Rest for an E-commerce</p>
+              <p>
+                <span>Spring</span> -
+                <span>Java</span>
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-container">
+              <a
+                href="https://github.com/Mluchy/Informatorio2021-Java"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/source/img/photos/Info.png"
+                  alt="project"
+                  class="project-foto"
+                />
+              </a>
+
+              <p>2nd stage of the Informatorio</p>
+              <p>Java exercises</p>
+              <p>
+                <span>Java</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto, forma de contactarse -->
+    <section id="contact">
+      <h2 class="title-section">Contact</h2>
+      <div class="contact-container">
+        <img src="/source/img/photos/contact.jpg" alt="" class="dibujo" />
+        <div class="contact-items">
+          <a
+            href="mailto:mariaLgamarra@outlook.com?Subject=Interested%20in%20contacting%20you"
+            target="_blank"
+            rel=""
+            ><img src="/source/img/icons/mail.png" alt="" class="contact-icon"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/maría-luciana-gamarra-11751821a"
+            target="_blank"
+            rel=""
+            ><img
+              src="/source/img/icons/linkedin.png"
+              alt=""
+              class="contact-icon"
+          /></a>
+          <a href="https://github.com/Mluchy" target="_blank" rel=""
+            ><img
+              src="/source/img/icons/github-logo.png"
+              alt=""
+              class="contact-icon"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======  Footer ====== -->
+    <footer>
+      <h6>
+        Copyright &copy; María Luciana Gamarra
+        <br />
+        Designed in HTML - CSS - JavaScript
+      </h6>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/source/js/scripts.js"></script>
+  </body>
+</html>

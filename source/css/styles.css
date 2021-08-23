@@ -1,0 +1,636 @@
+/* =============== 
+ * === General ===
+ * ===============
+*/
+@font-face {
+  font-family: "Lobster";
+  src: url(/source/fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url(/source/fonts/Righteous-Regular.ttf);
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(/source/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Shadows";
+  src: url(/source/fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-super: "Lobster";
+  --ff-title: "Shadows";
+  --ff-sub: "Righteous";
+  --ff-desc: "OpenSans";
+
+  --clr-bg: #eaeaea;
+  --clr-text: #444444;
+  --clr-accent: #f30067;
+  --clr-accent2: #00d1cd;
+  --clr-bg2: #d1d1d1;
+  --clr-bg3: #6f8191;
+  --bg-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.4);
+  --bg-card: #f5f5f5;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-body: 1.25rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-body: 1.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[data-theme="dark"] {
+  --clr-bg: #444444;
+  --clr-text: #eaeaea;
+  --clr-accent: #00d1cd;
+  --clr-accent2: #f30067;
+  --clr-bg2: #6f8191;
+  --clr-bg3: #d1d1d1;
+  --bg-card: #444444;
+}
+
+body {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  margin: 0;
+  font-family: var(--ff-desc);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  padding: 5em 2em;
+}
+
+section:nth-child(2n + 3) {
+  background: var(--clr-bg2);
+}
+
+footer {
+  background: var(--clr-text);
+  color: var(--clr-bg);
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
+
+/* ======================== 
+ * === Texto en General ===
+ * ========================
+*/
+h1,
+h2,
+p {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h6 {
+  margin: auto;
+  padding: auto;
+}
+
+p {
+  font-size: var(--fs-body);
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-intro {
+  font-family: var(--ff-title);
+  margin-bottom: 0.25em;
+}
+
+.enfasis {
+  font-family: var(--ff-super);
+  color: var(--clr-accent);
+  display: block;
+}
+
+.sub-intro,
+.title-section {
+  background: var(--clr-accent2);
+  margin-bottom: 0.5em;
+  padding: 0.25em 1em;
+}
+
+.sub-intro {
+  font-family: var(--ff-title);
+}
+
+.title-section {
+  font-family: var(--ff-sub);
+  text-align: center;
+}
+
+/* ==============
+ * === Navbar ===
+ * ==============
+*/
+
+.hamb {
+  display: none;
+}
+
+.nav-container {
+  border-bottom: 6px solid var(--clr-accent);
+  background: var(--clr-bg2);
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  flex: 100%;
+}
+
+.logo {
+  font-family: var(--ff-title);
+  color: var(--clr-accent);
+  font-size: 4rem;
+  font-style: oblique;
+  text-shadow: 2px 2px var(--clr-accent2);
+  padding-left: 50px;
+  padding-right: 50px;
+  flex: 30%;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 70%;
+}
+
+.nav-link {
+  color: var(--clr-text);
+  font-size: 35px;
+  padding: 0.8em;
+  display: block;
+}
+
+.nav-link:hover,
+.active {
+  background-color: var(--clr-accent);
+  color: var(--clr-text);
+}
+
+/* ==========================
+ * === Switch modo Oscuro ===
+ * ==========================
+*/
+
+.switch-container {
+  margin: 20px;
+  width: 25%;
+  flex: 50%;
+}
+
+.mode {
+  width: 2.5rem;
+  height: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: inline;
+}
+
+.switch-mode {
+  --width: 80px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--height) / 2);
+
+  display: inline-block;
+  cursor: pointer;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-fill {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background: #dddddd;
+  transition: background 0.2s;
+}
+
+.switch-input:checked ~ .switch-fill {
+  background: var(--clr-accent);
+}
+
+.switch-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  width: var(--height);
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+}
+
+.switch-input:checked ~ .switch-fill::after {
+  transform: translateX(var(--height));
+}
+
+/* ============================
+ * === Banderitas de Idioma ===
+ * ============================
+*/
+
+.bandera-container {
+  width: 25%;
+  position: relative;
+}
+
+.bandera {
+  position: relative;
+  left: 90%;
+  width: 2.5rem;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bandera-container {
+  flex: 50%;
+}
+
+/* =====================
+ * === Sección Intro ===
+ * =====================
+*/
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.intro-titles {
+  text-align: center;
+  align-self: center;
+  flex-flow: row wrap;
+}
+
+.enfasis {
+  display: block;
+  width: 75%;
+  height: auto;
+  padding-left: 25%;
+}
+
+.foto-container {
+  align-self: center;
+}
+
+.foto {
+  filter: sepia(75%) contrast(100%) brightness(150%);
+  border-width: 25px;
+  border-style: ridge;
+  border-color: var(--clr-accent);
+  max-width: 720px;
+  height: auto;
+}
+
+/* =============================
+ * === Imágenes de Secciones ===
+ * =============================
+*/
+
+.dibujo {
+  border-radius: 10rem;
+  width: 20rem;
+  height: 20rem;
+  border: 7px solid var(--clr-accent);
+  box-shadow: var(--bg-shadow);
+}
+
+/* ========================
+ * === Sección About Me ===
+ * ========================
+*/
+
+#about {
+  display: block;
+  height: auto;
+}
+
+.about-me,
+.hobbies-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 2em;
+}
+
+.about-container,
+.hobbies-item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 10px solid var(--clr-accent);
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: var(--bg-shadow);
+}
+
+.hobbies-list {
+  list-style-type: none;
+}
+
+/* ======================
+ * === Sección Skills ===
+ * ======================
+*/
+
+#skills {
+  display: block;
+  height: 100vh;
+}
+
+.skills-container,
+.projects-container,
+.contact-container {
+  display: flex;
+  height: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.skill-item,
+.projects-items,
+.contact-items {
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  border: 10px solid var(--clr-accent);
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: var(--bg-shadow);
+}
+
+.skill-item > div > p {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.skill-item > div > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-icon {
+  width: 100px;
+  height: auto;
+  margin: 1em auto;
+}
+
+/* ========================
+ * === Sección Projects ===
+ * ========================
+*/
+#projects {
+  display: block;
+  height: 100vh;
+}
+
+.projects-container {
+  flex-direction: row-reverse;
+}
+
+.projects-items {
+  height: 100%;
+  flex-flow: row wrap;
+  align-items: center;
+
+  column-gap: 0.2em;
+}
+
+.card-container > p:first-of-type {
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.card-container > p > span {
+  font-weight: bold;
+}
+
+.card-container {
+  background-color: var(--bg-card);
+  margin-bottom: 1em;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.project-foto {
+  width: 100%;
+  height: 70%;
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+}
+
+/* =======================
+ * === Sección Contact ===
+ * =======================
+*/
+
+#contact {
+  display: block;
+  height: 80vh;
+}
+
+.contact-items {
+  height: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 8rem;
+  height: auto;
+}
+
+/* =================================
+ * === Pantallas menores a 600px ===
+ * =================================
+*/
+
+@media only screen and (max-width: 1024px) {
+  /* === Navbar === */
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar.responsive {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .hamb,
+  .hamb.responsive {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    height: 50px;
+    width: 50px;
+    display: block;
+  }
+
+  .responsive ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+  }
+
+  .navbar.responsive ul li {
+    width: 100%;
+    margin: auto;
+  }
+
+  .navbar.responsive ul li > a {
+    display: block;
+    padding: 0.2em;
+  }
+
+  /* === Home === */
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .switch-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flexbox;
+    flex: 75%;
+  }
+  .bandera-container {
+    flex: 25%;
+  }
+  .foto {
+    max-width: 100%;
+    height: auto;
+  }
+  .bandera {
+    position: relative;
+    left: 30px;
+  }
+
+  /* === Sections === */
+  .dibujo {
+    border-radius: 5rem;
+    width: 10rem;
+    height: 10rem;
+    border: 4px solid #f30067;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* === About me === */
+  .about-me,
+  .hobbies-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me {
+    flex-direction: column-reverse;
+  }
+
+  .about-container,
+  .hobbies-item {
+    width: 100%;
+    display: flex;
+  }
+
+  /* === Skills === */
+  #skills,
+  #projects,
+  #contact {
+    height: auto;
+  }
+
+  .skill-item,
+  .projects-items,
+  .contact-items {
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  /* === Project === */
+  .card-container {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  /* === Contact === */
+  .contact-icon {
+    margin: 1em;
+  }
+}
