@@ -4,22 +4,22 @@
 */
 @font-face {
   font-family: "Lobster";
-  src: url(/source/fonts/Lobster-Regular.ttf);
+  src: url(source/fonts/Lobster-Regular.ttf);
 }
 
 @font-face {
   font-family: "Righteous";
-  src: url(/source/fonts/Righteous-Regular.ttf);
+  src: url(source/fonts/Righteous-Regular.ttf);
 }
 
 @font-face {
   font-family: "OpenSans";
-  src: url(/source/fonts/OpenSans-Regular.ttf);
+  src: url(source/fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
   font-family: "Shadows";
-  src: url(/source/fonts/ShadowsIntoLight-Regular.ttf);
+  src: url(source/fonts/ShadowsIntoLight-Regular.ttf);
 }
 
 *,
