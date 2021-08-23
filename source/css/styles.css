@@ -448,7 +448,7 @@ a {
 */
 #projects {
   display: block;
-  height: 100vh;
+  height: auto;
 }
 
 .projects-container {
@@ -456,8 +456,8 @@ a {
 }
 
 .projects-items {
-  height: 100% ;
-  flex-flow: row wrap ; 
+  height: 100%;
+  flex-flow: row wrap;
   align-items: center;
   column-gap: 0.2em;
 }
