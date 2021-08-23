@@ -448,7 +448,7 @@ a {
 */
 #projects {
   display: block;
-  height: auto;
+  height: 100vh;
 }
 
 .projects-container {
@@ -459,7 +459,7 @@ a {
   height: 100%;
   flex-flow: row wrap;
   align-items: center;
-  column-gap: 0.2em;
+  column-gap: 0.1em;
 }
 
 .card-container > p:first-of-type {
