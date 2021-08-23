@@ -456,10 +456,9 @@ a {
 }
 
 .projects-items {
-  height: 100%;
-  flex-flow: row wrap;
+  height: 100% !important;
+  flex-flow: row wrap ; 
   align-items: center;
-
   column-gap: 0.2em;
 }
 
